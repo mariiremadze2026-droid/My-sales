@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ადმინ პანელი</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    .animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #4f46e5, #7c3aed); background-size: 400% 400%; animation: gradientShift 15s ease infinite; z-index: -2; }
+    @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <div class="animated-bg"></div>
+
+  <div class="flex">
+    <!-- Sidebar -->
+    <div class="w-72 bg-white h-screen shadow-xl p-6 fixed">
+      <h1 class="text-2xl font-bold text-purple-600 mb-10">ადმინ პანელი</h1>
+      <ul class="space-y-4">
+        <li class="flex items-center gap-3 text-purple-600 font-medium"><i class="fas fa-home"></i> დაშბორდი</li>
+        <li class="flex items-center gap-3 hover:text-purple-600 cursor-pointer"><i class="fas fa-box"></i> პროდუქტები</li>
+        <li class="flex items-center gap-3 hover:text-purple-600 cursor-pointer"><i class="fas fa-users"></i> გამყიდველები</li>
+        <li class="flex items-center gap-3 hover:text-purple-600 cursor-pointer"><i class="fas fa-shopping-cart"></i> შეკვეთები</li>
+        <li class="flex items-center gap-3 hover:text-purple-600 cursor-pointer"><i class="fas fa-cog"></i> პარამეტრები</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="ml-72 flex-1 p-8">
+      <h2 class="text-3xl font-bold mb-8 text-white">მოგესალმებით, ადმინისტრატორო!</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div class="bg-white rounded-3xl p-6 shadow">დღეს გაყიდვები: <span class="text-3xl font-bold text-green-600">1240 ლ</span></div>
+        <div class="bg-white rounded-3xl p-6 shadow">აქტიური გამყიდველები: <span class="text-3xl font-bold">87</span></div>
+        <div class="bg-white rounded-3xl p-6 shadow">ახალი შეკვეთები: <span class="text-3xl font-bold text-orange-600">19</span></div>
+      </div>
+
+      <button onclick="window.location.href='add-product.html'" 
+              class="bg-purple-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-purple-700">
+        + ახალი პროდუქტის დამატება
+      </button>
+    </div>
+  </div>
+</body>
+</html>
